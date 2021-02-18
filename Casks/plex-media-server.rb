@@ -1,12 +1,17 @@
 cask "plex-media-server" do
-  version "1.21.1.3830-6c22540d5"
-  sha256 "129292c9ebc57d5d1a771f920e2dcc6ddad47783536cc42bca972a687e5f3bca"
+  version "1.21.3.4046-3c1c83ba4"
+  sha256 "42c2c59ac7cbd26712e0bc7342d515249a26d4db617d52efd18a48fc082eb863"
 
   url "https://downloads.plex.tv/plex-media-server-new/#{version}/macos/PlexMediaServer-#{version}-x86_64.zip"
-  appcast "https://plex.tv/api/downloads/5.json"
   name "Plex Media Server"
   desc "Home media server"
   homepage "https://www.plex.tv/"
+
+  livecheck do
+    url "https://plex.tv/api/downloads/5.json"
+    strategy :page_match
+    regex(%r{href=.*?/PlexMediaServer-(\d+(?:\.\d+)*-[\da-f]+)-x86_64\.zip}i)
+  end
 
   auto_updates true
 

@@ -1,6 +1,6 @@
 cask "keysmith" do
-  version "1.8.2,75"
-  sha256 "1628e42d95c049bf7c0a309ce2812c6282025a6fd6b932b341f25416c77eeb55"
+  version "1.10.1,79"
+  sha256 "d54e3725dfb4b0053c6a536416683593c244e2af5fb1a65646b42d1243b8e3f6"
 
   url "https://keysmith.app/versions/Keysmith-#{version.before_comma}.dmg"
   name "Keysmith"
@@ -15,4 +15,10 @@ cask "keysmith" do
   depends_on macos: ">= :catalina"
 
   app "Keysmith.app"
+
+  zap trash: [
+    "~/Library/Caches/app.keysmith.Keysmith",
+    "~/Library/Keysmith",
+    "~/Library/Preferences/app.keysmith.Keysmith.plist",
+  ]
 end

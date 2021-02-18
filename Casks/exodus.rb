@@ -1,11 +1,12 @@
 cask "exodus" do
-  version "20.12.18"
-  sha256 "7f068787e056dd890b5f495ebd94c2e86008192f0b351ad541fe0483f56772cb"
+  version "21.2.12"
+  sha256 "8a67bc29b3d0e30ab33dcce07488aedb17f6e878785a2cb40bc50857313cfff6"
 
-  url "https://downloads.exodus.io/releases/exodus-macos-#{version}.dmg"
-  appcast "https://www.exodus.io/releases/"
+  url "https://downloads.exodus.com/releases/exodus-macos-#{version}.dmg"
+  appcast "https://www.exodus.com/releases/"
   name "Exodus"
-  homepage "https://www.exodus.io/"
+  desc "Desktop wallet for cryptocurrency assets"
+  homepage "https://www.exodus.com/"
 
   auto_updates true
 
